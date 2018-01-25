@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="add_student_data" author="richa">
+        <insert tableName="Student">
+            <column name="StudentId" type="INT" valueNumeric="1004"/>
+            <column name="FirstName">Dinesh</column>
+            <column name="LastName">Kartik</column>
+
+        </insert>
+        <insert tableName="Student">
+            <column name="StudentId" type="INT" valueNumeric="1005"/>
+            <column name="FirstName">Ashish</column>
+            <column name="LastName">Nehra</column>
+
+        </insert>
+
+
+
+    </changeSet>
+</databaseChangeLog>
