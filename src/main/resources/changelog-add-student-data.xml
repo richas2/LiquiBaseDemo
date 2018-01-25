@@ -24,8 +24,8 @@
 
         <rollback>
             <sql>
-                delete from Student
-                where StudentId =1001
+                delete from "Student"
+                where "StudentId" in (1001,1002)
             </sql>
         </rollback>
     </changeSet>
