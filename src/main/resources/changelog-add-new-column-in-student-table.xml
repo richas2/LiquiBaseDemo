@@ -5,7 +5,11 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
 
-    <include file="changelog-add-new-column-in-student-table.xml" relativeToChangelogFile="true"/>
-
+    <changeSet author="richa" id="addColumn-example">
+        <addColumn
+                   tableName="Student">
+            <column name="address" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
 
 </databaseChangeLog>
