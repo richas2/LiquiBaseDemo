@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="add_student_data" author="richa">
+        <insert tableName="Student">
+            <column name="StudentId" type="INT" valueNumeric="1001"/>
+            <column name="FirstName">Richa</column>
+            <column name="LastName">Singh</column>
+
+        </insert>
+        <insert tableName="Student">
+            <column name="StudentId" type="INT" valueNumeric="1002"/>
+            <column name="FirstName">MS</column>
+            <column name="LastName">Dhoni</column>
+
+        </insert>
+
+
+
+
+        <rollback>
+            <sql>
+                delete from "Student"
+                where "StudentId" in (1001,1002)
+            </sql>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
